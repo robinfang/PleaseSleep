@@ -98,7 +98,7 @@ then
 	echo "(Press ENTER key to continue.)"
 	read
 	echo
-	brew install sleepwatcher --quiet
+	brew install sleepwatcher 
 	echo
 	echo
 	echo "(Press ENTER key to continue.)"
@@ -110,9 +110,9 @@ then
 		chmod u+x ~/.sleep
 		echo "#! /bin/bash" > ~/.sleep
 		echo "echo" >> ~/.sleep
-		echo "echo `date` \"Sleeping\" >> /tmp/sleep.log" >> ~/.sleep
+		echo "echo \`date\` \"Sleeping\" >> /tmp/sleep.log" >> ~/.sleep
 		echo "/usr/sbin/networksetup setairportpower en0 off" >> ~/.sleep
-		echo "echo `date` `/usr/sbin/networksetup getairportpower en0` >> /tmp/sleep.log" >> ~/.sleep
+		echo "echo \`date\` \`/usr/sbin/networksetup getairportpower en0\` >> /tmp/sleep.log" >> ~/.sleep
 	echo "Done."
 	echo "(Press ENTER key to continue.)"
 	read
@@ -123,17 +123,17 @@ then
 		chmod u+x ~/.wakeup
 		echo "#! /bin/bash" > ~/.wakeup
 		echo "echo" >> ~/.wakeup
-		echo "echo `date` \"Waking up\" >> /tmp/sleep.log" >> ~/.wakeup
+		echo "echo \`date\` \"Waking up\" >> /tmp/sleep.log" >> ~/.wakeup
 		echo "sleep 7" >> ~/.wakeup
 		echo "/usr/sbin/networksetup setairportpower en0 on" >> ~/.wakeup
-		echo "echo `date` `/usr/sbin/networksetup getairportpower en0` >> /tmp/sleep.log" >> ~/.wakeup
+		echo "echo \`date\` \`/usr/sbin/networksetup getairportpower en0\` >> /tmp/sleep.log" >> ~/.wakeup
 	echo "Done."
 	echo "(Press ENTER key to continue.)"
 	read
 	echo
 
 	echo "Copying *.plist file to ~/Library/LaunchAgents ..."
-	cp /usr/local/Cellar/sleepwatcher/2.2/de.bernhard-baehr.sleepwatcher-20compatibility-localuser.plist ~/Library/LaunchAgents
+	cp /usr/local/Cellar/sleepwatcher/2.2.1/de.bernhard-baehr.sleepwatcher-20compatibility-localuser.plist ~/Library/LaunchAgents
 	echo "Done."
 	echo "(Press ENTER key to continue.)"
 	read
